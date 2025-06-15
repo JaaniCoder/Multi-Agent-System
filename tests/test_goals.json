@@ -1,0 +1,35 @@
+[
+  {
+    "goal": "Find the next SpaceX launch, check weather at that location, then summarize if it may be delayed.",
+    "expected_pipeline": [
+      {"task": "get_next_launch", "agent": "spacex_agent"},
+      {"task": "check_weather", "agent": "weather_agent"},
+      {"task": "summarize_delay", "agent": "summarizer_agent"}
+    ],
+    "evaluation": ""
+  },
+  {
+    "goal": "Tell me if the upcoming SpaceX launch will be affected by weather.",
+    "expected_pipeline": [
+      {"task": "get_next_launch", "agent": "spacex_agent"},
+      {"task": "check_weather", "agent": "weather_agent"},
+      {"task": "summarize_delay", "agent": "summarizer_agent"}
+    ],
+    "evaluation": ""
+  },
+  {
+    "goal": "Get the details of the next SpaceX launch.",
+    "expected_pipeline": [
+      {"task": "get_next_launch", "agent": "spacex_agent"},
+      {"task": "summarize_delay", "agent": "summarizer_agent"}
+    ],
+    "evaluation": ""
+  },
+  {
+    "goal": "What's the weather like in Cape Canaveral today?",
+    "expected_pipeline": [
+      {"task": "check_weather", "agent": "weather_agent"}
+    ],
+    "evaluation": ""
+  }
+]
